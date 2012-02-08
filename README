@@ -13,7 +13,7 @@ Based on "unobtrusive table sort script revisited", big thanks to Brian McAllist
 Usage:
 ======
 
-{{sortable_tables}}
+{{sortable_table}}
 
 
 |_(sortable). Column 1|_(sortable-numeric). Column 2|_. Unsortable|
@@ -29,7 +29,7 @@ More info about sorting:
 Installation:
 =============
 
-copy plugin into vendor/plugins directory with name `sortable_tables'
+copy plugin into vendor/plugins directory with name `sortable_table'
 
 restart redmine
 
@@ -38,6 +38,6 @@ restart redmine
 How it work:
 ============
 
-macros `sortable_tables' include required javascript and css files.
+macros `sortable_table' include required javascript and css files.
 
 included javascript automatically make sortable all tables with columns headers class `sortable*'
