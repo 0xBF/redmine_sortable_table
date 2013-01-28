@@ -13,13 +13,8 @@ end
 Redmine::WikiFormatting::Macros.register do
   desc "Macro for add javascript and css files for table sort work"
   macro :sortable_table do |obj, args|
-    content_for :header_tags do
-      "  %s\n  %s" % [
-        javascript_include_tag( "tablesort.js", :plugin => 'sortable_table'),
-        stylesheet_link_tag( :default, :plugin => 'sortable_table')
-      ]
-    end
+    content_for :header_tags, javascript_include_tag( "tablesort.js", :plugin => 'sortable_table').html_safe
+    content_for :header_tags, stylesheet_link_tag( :default, :plugin => 'sortable_table').html_safe
     ""
   end
 end
-
